@@ -1,0 +1,493 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #5d3df0 0%, #7833ff 25%, #f6f8fc 25.1%, #f6f8fc 100%);
+  color: #1f1f38;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem 2.5rem;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.9rem;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.brand-text p {
+  margin: 0.15rem 0 0;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.course-select {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.course-label {
+  font-size: 0.95rem;
+}
+
+.course-badge {
+  background: rgba(29, 190, 118, 0.25);
+  color: #0d9150;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.dashboard {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 290px;
+  gap: 1.5rem;
+  padding: 0 2.5rem 2.5rem;
+}
+
+.sidebar,
+.practice,
+.assistant {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(17, 27, 75, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  gap: 1.4rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #233152;
+}
+
+.section-icon {
+  width: 2.3rem;
+  height: 2.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  background: rgba(72, 97, 255, 0.12);
+  font-size: 1.1rem;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7d88a6;
+}
+
+.schedule-list,
+.assessment-list,
+.chat-thread {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-card {
+  position: relative;
+  background: #f4f6ff;
+  border-radius: 1.1rem;
+  padding: 1rem 1rem 1.2rem;
+  margin-top: 0.9rem;
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.schedule-card.active {
+  border-color: rgba(72, 97, 255, 0.6);
+  background: rgba(72, 97, 255, 0.12);
+}
+
+.schedule-card:hover {
+  border-color: rgba(72, 97, 255, 0.35);
+}
+
+.schedule-time {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #7783a0;
+}
+
+.schedule-title {
+  margin: 0.35rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.schedule-room {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: #7d88a6;
+}
+
+.schedule-badge {
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.schedule-badge.now {
+  background: rgba(72, 97, 255, 0.2);
+  color: #2a3dd1;
+}
+
+.schedule-badge.new {
+  background: rgba(255, 193, 58, 0.25);
+  color: #b57600;
+}
+
+.assessments {
+  margin-top: auto;
+}
+
+.assessments h3 {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: #233152;
+}
+
+.assessment-card {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  background: #fff6e6;
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 193, 58, 0.3);
+}
+
+.assessment-type {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ad6b00;
+  background: rgba(255, 193, 58, 0.3);
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.7rem;
+}
+
+.assessment-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.assessment-meta {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: #7d88a6;
+}
+
+.practice {
+  gap: 1.4rem;
+}
+
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.practice-progress {
+  margin: 0;
+  font-weight: 600;
+  color: #7d88a6;
+}
+
+.practice-tags span {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.35rem 0.75rem;
+  background: #eef1ff;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #485ffd;
+  text-transform: capitalize;
+}
+
+.practice-course {
+  background: rgba(72, 97, 255, 0.14);
+  color: #2f46f6;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.practice-card,
+.solution-card {
+  background: #f9fbff;
+  border-radius: 1.2rem;
+  padding: 1.4rem;
+  border: 1px solid rgba(72, 97, 255, 0.12);
+}
+
+.practice-card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.practice-question {
+  margin: 0.75rem 0 1rem;
+  font-size: 1rem;
+  color: #233152;
+}
+
+.hint-button {
+  border: none;
+  background: rgba(72, 97, 255, 0.12);
+  color: #2f46f6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hint-button:hover {
+  background: rgba(72, 97, 255, 0.2);
+}
+
+.hint {
+  margin-top: 0.9rem;
+  background: #fff;
+  border-left: 4px solid #5d73ff;
+  padding: 0.9rem 1rem;
+  border-radius: 0.7rem;
+  color: #3a4a84;
+  line-height: 1.5;
+}
+
+.response-form {
+  margin-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.response-label {
+  font-weight: 600;
+  color: #233152;
+}
+
+.response-input {
+  min-height: 120px;
+  border-radius: 1rem;
+  border: 1px solid rgba(128, 139, 172, 0.25);
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  background: #fff;
+}
+
+.response-input:focus {
+  outline: 3px solid rgba(72, 97, 255, 0.35);
+}
+
+.response-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.response-actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.response-actions button:active {
+  transform: translateY(1px);
+}
+
+.response-actions .primary {
+  background: linear-gradient(135deg, #5d3df0, #8a52ff);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(93, 61, 240, 0.25);
+}
+
+.response-actions .secondary {
+  background: #fff;
+  color: #2f46f6;
+  border: 1px solid rgba(93, 61, 240, 0.2);
+}
+
+.solution-card h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.05rem;
+}
+
+.solution-card ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #3a4a84;
+  line-height: 1.6;
+}
+
+.assistant {
+  gap: 1.2rem;
+}
+
+.assistant-header {
+  margin-bottom: 0.5rem;
+}
+
+.chat-thread {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.chat-message.student {
+  align-items: flex-end;
+}
+
+.chat-bubble {
+  max-width: 100%;
+  border-radius: 1rem;
+  padding: 0.85rem 1rem;
+  line-height: 1.55;
+  font-size: 0.95rem;
+  background: #f1f4ff;
+  color: #233152;
+  box-shadow: 0 10px 22px rgba(17, 27, 75, 0.08);
+}
+
+.chat-message.student .chat-bubble {
+  background: #2f46f6;
+  color: #fff;
+}
+
+.chat-time {
+  font-size: 0.7rem;
+  color: #8a94b5;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: #f4f6ff;
+  border-radius: 1rem;
+  padding: 0.75rem;
+  border: 1px dashed rgba(72, 97, 255, 0.3);
+}
+
+.chat-input textarea {
+  flex: 1;
+  border: none;
+  resize: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #7d88a6;
+}
+
+.chat-input textarea:focus {
+  outline: none;
+}
+
+.chat-input button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  background: rgba(72, 97, 255, 0.25);
+  color: #2f46f6;
+  font-weight: 600;
+}
+
+@media (max-width: 1180px) {
+  .dashboard {
+    grid-template-columns: 230px minmax(0, 1fr);
+  }
+
+  .assistant {
+    grid-column: span 2;
+    flex-direction: column;
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 880px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .assistant {
+    order: 3;
+  }
+}
